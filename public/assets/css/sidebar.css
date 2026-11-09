@@ -1,0 +1,259 @@
+/* =========================================
+   ESTRUCTURA GENERAL: MENÚ + CONTENIDO
+   Manos que Sirven
+========================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+    margin: 0;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.app-layout {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: stretch;
+    gap: 0 !important;
+    width: 100%;
+    min-height: 100vh;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* =========================================
+   MENÚ LATERAL
+========================================= */
+
+.app-layout > .sidebar {
+    display: flex;
+    flex: 0 0 255px !important;
+    width: 255px !important;
+    min-width: 255px !important;
+    max-width: 255px !important;
+
+    height: 100vh;
+    min-height: 100vh;
+    position: sticky;
+    top: 0;
+    align-self: flex-start;
+
+    flex-direction: column;
+    margin: 0 !important;
+    padding: 25px 18px 18px;
+
+    background: #124b34;
+    color: #ffffff;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+/* =========================================
+   MARCA DEL SISTEMA
+========================================= */
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 35px;
+}
+
+.brand-icon {
+    width: 43px;
+    height: 43px;
+    min-width: 43px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #eaf4ee;
+    color: #124b34;
+    border-radius: 12px;
+    font-size: 17px;
+    font-weight: 800;
+}
+
+.brand h1 {
+    margin: 0;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.brand p {
+    margin: 4px 0 0;
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 11px;
+}
+
+/* =========================================
+   TÍTULO DEL MENÚ
+========================================= */
+
+.menu-title {
+    margin: 0 0 12px 10px;
+    color: rgba(255, 255, 255, 0.55);
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* =========================================
+   OPCIONES DEL MENÚ
+========================================= */
+
+.sidebar-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.sidebar-menu a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 13px;
+    color: rgba(255, 255, 255, 0.82);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    border-radius: 9px;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.sidebar-menu a:hover {
+    background: rgba(255, 255, 255, 0.12);
+    color: #ffffff;
+}
+
+.sidebar-menu a.active {
+    background: #eaf4ee;
+    color: #124b34;
+    font-weight: 700;
+}
+
+.menu-symbol {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 23px;
+    min-width: 23px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* =========================================
+   INFORMACIÓN DEL USUARIO
+========================================= */
+
+.sidebar-footer {
+    margin-top: auto;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.user-name {
+    margin: 0 0 4px;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.user-role {
+    margin: 0 0 17px;
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 12px;
+}
+
+/* =========================================
+   CERRAR SESIÓN
+========================================= */
+
+.logout-button {
+    width: 100%;
+    padding: 11px;
+    background: transparent;
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.logout-button:hover {
+    background: rgba(255, 255, 255, 0.12);
+}
+
+/* =========================================
+   CONTENIDO PRINCIPAL
+========================================= */
+
+.app-layout > .main-content {
+    display: block;
+    flex: 1 1 0 !important;
+    width: auto !important;
+    min-width: 0;
+    max-width: none !important;
+
+    margin: 0 !important;
+    padding: 32px 48px !important;
+}
+
+.app-layout > .main-content > .contenido-modulo {
+    display: block;
+    width: 100% !important;
+    min-width: 0;
+    max-width: none !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Evitar desplazamientos laterales */
+
+.main-content .encabezado-modulo,
+.main-content .indicadores,
+.main-content .panel,
+.main-content .pie-pagina {
+    margin-left: 0;
+}
+
+/* =========================================
+   DISEÑO RESPONSIVE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .app-layout {
+        flex-direction: column !important;
+    }
+
+    .app-layout > .sidebar {
+        position: relative;
+        top: auto;
+        width: 100% !important;
+        min-width: 0 !important;
+        max-width: none !important;
+        flex: 0 0 auto !important;
+        height: auto;
+        min-height: 0;
+    }
+
+    .app-layout > .main-content {
+        width: 100% !important;
+        flex: 1 1 auto !important;
+        padding: 22px 18px !important;
+    }
+}
