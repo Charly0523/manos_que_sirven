@@ -1,0 +1,33 @@
+/* Estilos del módulo POS. Se conservan los colores actuales del sistema. */
+.tienda-contenido { width: 100%; min-width: 0; }
+.tienda-header { display:flex; justify-content:space-between; align-items:center; gap:18px; margin-bottom:22px; }
+.tienda-header h1 { margin:3px 0 6px; font-size:28px; color:var(--texto,#26352d); font-weight:750; }
+.tienda-header p { margin:0; color:var(--texto-secundario,#6b776f); }
+.tienda-etiqueta { color:var(--verde,#176b4d); font-weight:800; font-size:11px; letter-spacing:1.2px; }
+.tienda-rol { color:var(--texto-secundario,#6b776f); font-size:13px; }
+.tienda-tabs { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:22px; }
+.tienda-tabs a { text-decoration:none; padding:10px 16px; border-radius:9px; border:1px solid var(--borde,#e1e8e3); background:#fff; color:var(--texto,#26352d); font-size:14px; }
+.tienda-tabs a.seleccionado { background:var(--verde,#176b4d); border-color:var(--verde,#176b4d); color:#fff; }
+.tienda-panel { background:#fff; border:1px solid var(--borde,#e1e8e3); border-radius:12px; padding:22px; margin-bottom:20px; }
+.tienda-panel h2 { font-weight:700; color:var(--texto,#26352d); }
+.btn-mqs { background:var(--verde,#176b4d); color:#fff; border:1px solid var(--verde,#176b4d); }
+.btn-mqs:hover, .btn-mqs:focus { background:var(--verde-oscuro,#10543c); color:#fff; border-color:var(--verde-oscuro,#10543c); }
+.tienda-total { font-size:29px; color:var(--verde,#176b4d); }
+.tienda-resumen { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:12px; margin:17px 0; }
+.tienda-resumen>div { background:var(--fondo,#f4f7f5); border:1px solid var(--borde,#e1e8e3); border-radius:9px; padding:14px; }
+.tienda-resumen span { display:block; font-size:12px; color:var(--texto-secundario,#6b776f); }
+.tienda-resumen strong { display:block; font-size:20px; color:var(--verde,#176b4d); margin-top:6px; }
+.tienda-form-inline { margin-top:6px; display:flex; flex-wrap:wrap; gap:5px; }
+.tienda-form-inline input { min-width:110px; max-width:175px; border:1px solid #ced4da; border-radius:5px; padding:4px 6px; font-size:13px; }
+.tienda-input-mediano { max-width:350px; }
+.tienda-recibo { max-width:580px; margin-inline:auto; }
+.tienda-recibo td, .tienda-recibo th { font-size:13px; }
+@media (max-width:900px) { .tienda-resumen { grid-template-columns:repeat(2,1fr); } .tienda-header { align-items:flex-start; } }
+@media (max-width:600px) { .tienda-panel { padding:15px; } .tienda-resumen { grid-template-columns:1fr; } .tienda-header { display:block; } }
+@media print {
+  @page { margin:12mm; }
+  .sidebar, .no-print, .tienda-header, .tienda-tabs { display:none !important; }
+  .app-layout { display:block !important; }
+  .main-content { padding:0 !important; }
+  .tienda-recibo { display:block !important; width:100%; margin:0; border:0; box-shadow:none; }
+}

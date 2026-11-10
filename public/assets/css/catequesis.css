@@ -1,0 +1,21 @@
+/* Extensión del diseño existente, sin cambiar su paleta. */
+.catequesis-contenido { min-width:0; width:100%; }
+.catequesis-encabezado { display:flex; justify-content:space-between; align-items:center; gap:14px; margin-bottom:22px; }
+.catequesis-encabezado h1 { font-size:28px; margin:4px 0 6px; font-weight:750; color:var(--texto,#26352d); }
+.catequesis-encabezado p { margin:0; color:var(--texto-secundario,#6b776f); }
+.catequesis-subtitulo { color:var(--verde,#176b4d); font-size:11px; letter-spacing:1px; font-weight:800; }
+.catequesis-pestanas { display:flex; flex-wrap:wrap; gap:7px; margin-bottom:22px; }
+.catequesis-pestanas a { text-decoration:none; padding:10px 13px; border:1px solid var(--borde,#e1e8e3); border-radius:9px; background:#fff; color:var(--texto,#26352d); font-size:13px; }
+.catequesis-pestanas a.activa { color:#fff; border-color:var(--verde,#176b4d); background:var(--verde,#176b4d); }
+.catequesis-panel { background:#fff; border:1px solid var(--borde,#e1e8e3); border-radius:12px; padding:22px; margin-bottom:19px; }
+.catequesis-panel h2 { font-size:19px; font-weight:700; margin:0 0 18px; }
+.catequesis-boton { background:var(--verde,#176b4d); border-color:var(--verde,#176b4d); color:#fff; }
+.catequesis-boton:hover { background:var(--verde-oscuro,#10543c); border-color:var(--verde-oscuro,#10543c); color:#fff; }
+.catequesis-acciones { display:flex; flex-wrap:wrap; align-items:center; gap:6px; }
+.catequesis-acciones form { margin:0; }
+.catequesis-estado { width:auto; min-width:126px; }
+.catequesis-barra { display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:16px; flex-wrap:wrap; }
+.catequesis-barra h2 { margin:0; }
+.catequesis-nota { width:150px; max-width:100%; }
+.catequesis-asistencia { width:220px; max-width:100%; }
+@media (max-width:700px) { .catequesis-panel { padding:15px; } .catequesis-encabezado { display:block; } .catequesis-acciones { min-width:180px; } }

@@ -1074,7 +1074,7 @@
 
             <a href="#ubicacion">Ubicación</a>
 
-            <a href="login.php" class="acceso">
+            <a href="public/login.php" class="acceso">
                 Acceso del personal
             </a>
 
@@ -1780,7 +1780,7 @@
 
                 <a href="#ubicacion">Ubicación</a>
 
-                <a href="login.php">Acceso administrativo</a>
+                <a href="public/login.php">Acceso administrativo</a>
 
             </div>
 
